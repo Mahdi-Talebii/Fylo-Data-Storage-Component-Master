@@ -1,0 +1,213 @@
+:root {
+  font-size: 62.5% !important;
+}
+
+* {
+  font-size: 1.4rem;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Raleway", sans-serif, cursive;
+}
+
+.centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centralize-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.self-centralize {
+  align-self: center;
+  justify-self: center;
+}
+
+.mobile-content {
+  display: none;
+}
+
+.desktop-content {
+  display: inline-block;
+}
+
+@media all and (max-width: 376px) {
+  .mobile-centralize {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-centralize-column {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mobile-content {
+    display: inline-block !important;
+  }
+  .desktop-content {
+    display: none !important;
+  }
+}
+body {
+  background-color: hsl(229, 57%, 11%);
+}
+body .background {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  z-index: -5;
+}
+body .desktop-background {
+  height: 50vh;
+}
+
+section[role=main] {
+  margin-top: 16%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  width: 55%;
+  height: 18rem;
+  position: relative;
+}
+section[role=main] .flyo {
+  background-color: hsl(228, 56%, 26%);
+  grid-column: 1/3;
+  border-radius: 1rem 10rem 1rem 1rem;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 5rem;
+}
+section[role=main] .flyo .buttons-container .button {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3.5rem;
+}
+section[role=main] .flyo .buttons-container .document-button {
+  padding: 0.7rem 0.6rem;
+}
+section[role=main] .flyo .buttons-container .folder-button {
+  padding: 0.8rem 0.5rem;
+}
+section[role=main] .flyo .buttons-container .upload-button {
+  padding: 0.9rem 0.5rem;
+}
+section[role=main] .details {
+  background-color: hsl(228, 56%, 26%);
+  grid-column: 3/6;
+  border-radius: 1rem;
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 100%;
+  height: 70%;
+  padding: 2rem 5rem 2rem;
+  align-items: flex-start;
+}
+section[role=main] .details p {
+  color: hsl(229, 7%, 55%);
+  margin-bottom: 1.5rem;
+}
+section[role=main] .details p span {
+  color: white;
+  margin: 0rem 0.5rem;
+}
+section[role=main] .details .remaining-percentage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+}
+section[role=main] .details .remaining-percentage-container .whole-space {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  width: 100%;
+  height: 2rem;
+  padding: 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 2rem;
+}
+section[role=main] .details .remaining-percentage-container .whole-space .remaining {
+  background-image: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  grid-column: 1/16;
+  border-radius: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.2rem;
+}
+section[role=main] .details .remaining-percentage-container .whole-space .remaining .white-ball {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+}
+section[role=main] .details .remaining-percentage-container .min-space {
+  align-self: flex-end;
+  justify-self: flex-start;
+  color: white;
+}
+section[role=main] .details .remaining-percentage-container .max-space {
+  align-self: flex-end;
+  justify-self: flex-end;
+  color: white;
+}
+section[role=main] .remaining-space-number {
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  overflow: visible !important;
+  z-index: 2;
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+section[role=main] .remaining-space-number p {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: hsl(229, 7%, 55%);
+}
+section[role=main] .remaining-space-number p span {
+  color: black;
+  font-size: 2.5rem;
+}
+
+@media all and (max-width: 376px) {
+  section[role=main] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 6rem;
+    height: 50rem;
+    overflow: visible !important;
+  }
+  section[role=main] .flyo {
+    height: 20rem;
+  }
+  section[role=main] .details {
+    height: 17rem;
+    margin-top: 2rem;
+    padding: 2rem 2.5rem;
+  }
+  section[role=main] .remaining-space-number {
+    top: 80%;
+    right: 25%;
+  }
+}/*# sourceMappingURL=style.css.map */

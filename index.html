@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <link
+      rel="shortcut icon"
+      href="Assets/Files/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Assets/Styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="centralize-column">
+    <img
+      src="Assets/Files/bg-desktop.png"
+      alt=""
+      class="background desktop-content desktop-background"
+    />
+    <img
+      src="Assets/Files/bg-mobile.png"
+      alt=""
+      class="background mobile-content mobile-background"
+    />
+    <section role="main">
+      <div class="flyo centralize-column">
+        <h1 class="centralize">
+          <a href="#" class="logo centralize">
+            <img src="Assets/Files/logo.svg" alt="" />
+          </a>
+        </h1>
+        <div class="buttons-container centralize">
+          <img
+            src="Assets/Files/icon-document.svg"
+            alt=""
+            class="button document-button"
+          />
+          <img
+            src="Assets/Files/icon-folder.svg"
+            alt=""
+            class="button folder-button"
+          />
+          <img
+            src="Assets/Files/icon-upload.svg"
+            alt=""
+            class="button upload-button"
+          />
+        </div>
+      </div>
+      <div class="details centralize-column">
+        <p>
+          <!-- in this span you can write how much of the storage is being used -->
+          You’ve used <span class="used-space">815 GB</span> of your storage
+        </p>
+        <div class="remaining-percentage-container">
+          <div class="whole-space">
+            <div class="remaining">
+              <div class="white-ball"></div>
+            </div>
+          </div>
+          <!-- minimum space available for a client -->
+          <p class="min-space">0 GB</p>
+          <!-- maximum space available for a client -->
+          <p class="max-space">1000 GB</p>
+        </div>
+      </div>
+      <div class="remaining-space-number centralize">
+        <p>
+          <span>185</span>
+          GB LEFT
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
